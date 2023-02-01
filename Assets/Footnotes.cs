@@ -1874,6 +1874,10 @@ Position type: tl tr bl br (only used in intro conditions 1 and 2)
         button[3].OnInteractEnded += delegate () { OnRelease(); };
     }
 
-    
-
+    // Implemented by Quinn Wuest
+    private IEnumerator TwitchHandleForcedSolve()
+    {
+        button[correctButton].OnInteract();
+        yield break;
+    }
 }
